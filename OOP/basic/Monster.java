@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.List;
 
-public class stepOneOOP {
+public class Monster {
   static Scanner userInput = new Scanner(System.in);
   //constant
   public final String id = "bel7aG";
@@ -39,10 +39,12 @@ public class stepOneOOP {
 
   public void attackTheMonster(double decreaseHealth) {
     int intDecreaseHealth = (int) decreaseHealth;
-    this.health -= intDecreaeHealth;
+    this.health -= intDecreaseHealth;
     if (this.health <= 0) {
       alive = false;
     }
   }
+
+  //constructor
 
 }
