@@ -92,8 +92,8 @@ public class MonsterTwo {
 
     this.monsterNameCharOne = this.monsterName.charAt(0);
 
-    battleDesk[this.xPositon][this.yPosition] = this.monsterNameCharOne;
-
+    battleDesk[this.xPosition][this.yPosition] = this.monsterNameCharOne;
+    numberOfMonsters++;
   }
 
   // Just i use this for test ..
