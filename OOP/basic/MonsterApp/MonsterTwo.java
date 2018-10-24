@@ -92,7 +92,7 @@ public class MonsterTwo {
 
     this.monsterNameCharOne = this.monsterName.charAt(0);
 
-    
+    battleDesk[this.xPositon][this.yPosition] = this.monsterNameCharOne;
 
   }
 
