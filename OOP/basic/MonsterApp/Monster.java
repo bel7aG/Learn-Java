@@ -14,7 +14,7 @@ public class Monster {
   private int yPosition = 0;
   private boolean alive = true;
 
-  public String monster = "Belhassen Gharsallah";
+  public String monsterName = "Belhassen Gharsallah";
 
   public int getAttack() {
     return this.attack;
@@ -46,5 +46,24 @@ public class Monster {
   }
 
   //constructor
+  public Monster() {
+
+  }
+
+  public Monster(int newAttack, int newMovement, boolean isAlive) {
+    this.attack = newAttack;
+    this.movement = newMovement;
+    this.alive = isAlive;
+  }
+
+  public Monster(int newHealth) {
+    this.health = newHealth;
+  }
+
+  public Monster(int newHealth, int newX, int newY) {
+    this(newHealth);
+    this.xPosition = newX;
+    this.yPosition = newY;
+  }
 
 }
