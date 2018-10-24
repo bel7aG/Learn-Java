@@ -82,9 +82,10 @@ public class MonsterTwo {
     int maxXDeskSpace = (battleDesk.length - 1);
     int maxYDeskSpace = (battleDesk[0].length - 1);
     int randomX, randomY;
+
     do {
-      randomX = ((int) Math.random() * maxXDeskSpace);
-      randomY = ((int) Math.random() * maxYDeskSpace);
+      randomX = ((int) (Math.random() * maxXDeskSpace));
+      randomY = ((int) (Math.random() * maxYDeskSpace));
     } while (battleDesk[randomX][randomY] != '*');
 
     this.xPosition = randomX;
