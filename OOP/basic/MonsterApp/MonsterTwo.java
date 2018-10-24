@@ -1,4 +1,15 @@
-public class Monster {
+import java.util.Arrays;
+
+public class MonsterTwo {
+
+  static char[][] battleDesk = new char[10][10];
+
+  public static void buildBattleDesk() {
+    for (char[] rowElement : battleDesk) {
+      Arrays.fill(rowElement, '*');
+    }
+  }
+
   //constant
   public final String ID = "bel7aG";
 
@@ -42,23 +53,34 @@ public class Monster {
   }
 
   //constructors in Java LoooL
-  public Monster() {
+  public MonsterTwo() {
 
   }
 
-  public Monster(int newAttack, int newMovement, boolean isAlive) {
+  public MonsterTwo(int newAttack, int newMovement, boolean isAlive) {
     this.attack = newAttack;
     this.movement = newMovement;
     this.alive = isAlive;
   }
 
-  public Monster(int newHealth) {
+  public MonsterTwo(int newHealth) {
     this.health = newHealth;
   }
 
-  public Monster(int newHealth, int newX, int newY) {
+  public MonsterTwo(int newHealth, int newX, int newY) {
     this.xPosition = newX;
     this.yPosition = newY;
   }
 
+  // Just i use this for test ..
+  public static void main(String[] args) {
+    for (int i = 0; i < battleDesk.length; i++) {
+      for (int j = 0; j < battleDesk.length; j++) {
+        battleDesk[i][j] = '*';
+        System.out.print(battleDesk[i][j] + "\t");
+      }
+      System.out.println("\n");
+
+    }
+  }
 }

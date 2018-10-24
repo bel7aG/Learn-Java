@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MonsterApp {
   public static void main(String[] args) {
     Monster bel7aG = new Monster();
@@ -8,5 +10,10 @@ public class MonsterApp {
 
     System.out.println("After Attack is still alive but with low HP = " + bel7aG.getHealth());
 
+    System.out.println("\n------------\n");
+
+    MonsterTwo test = new MonsterTwo();
+
+    System.out.println(test.buildBattleDesk);
   }
 }
