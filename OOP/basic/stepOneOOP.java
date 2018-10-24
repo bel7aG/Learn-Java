@@ -35,4 +35,14 @@ public class stepOneOOP {
     }
   }
 
+                //==> Overload
+
+  public void attackTheMonster(double decreaseHealth) {
+    int intDecreaseHealth = (int) decreaseHealth;
+    this.health -= intDecreaeHealth;
+    if (this.health <= 0) {
+      alive = false;
+    }
+  }
+
 }
