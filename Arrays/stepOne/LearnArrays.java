@@ -127,6 +127,58 @@ public class LearnArrays {
     }
 
     /* Arrays.copyOfRange(myArray, numberStartFromZero) */
+    System.out.println();
+    String[] copyOfRangeArray = Arrays.copyOfRange(pLanguages, 0, 4);
+    for (String element : copyOfRangeArray) {
+      System.out.print(element + "\t");
+    }
 
+    System.out.println();
+
+    Arrays.fill(myBeautyArray,  1231); // 1231 is my birthDayxD o\0
+
+    for (int element : myBeautyArray) {
+      System.out.print(element + "\t");
+    }
+
+            /* Array of Characters */
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    char[][] myDesk = new char[10][10];
+    for (char[] line : myDesk) {
+      System.out.print("| ");
+      for (char column : line) {
+        System.out.print('*' + " | ");
+      }
+      System.out.println();
+      System.out.println();
+    }
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    System.out.println();
+
+    int[] numbersToSort = new int[10];
+    for (int i = 0; i < numbersToSort.length; i++) {
+      numbersToSort[i] = (int) (Math.random() * 1000);
+    }
+
+    System.out.println("Before Sort:");
+
+    for (int num : numbersToSort) {
+      System.out.print(" | " + num + " ");
+    }
+    System.out.print("|");
+    System.out.println();
+    System.out.println();
+
+    System.out.println("After call Arrays.sort(myArray):");
+    Arrays.sort(numbersToSort);
+
+    for (int num : numbersToSort) {
+      System.out.print(" | " + num + " ");
+    }
   }
 }
