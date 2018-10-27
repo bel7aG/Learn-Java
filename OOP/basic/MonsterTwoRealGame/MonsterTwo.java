@@ -8,7 +8,7 @@ public class MonsterTwo {
   public final String ID = "bel7aG";
 
   //fields
-  private String iq = "Excelent";
+  // private String iq = "Excelent";
   private int health = 1000;
   private int attack = 1000; //MAXIMUM
   private int movement = 10; //KM/s
@@ -74,7 +74,7 @@ public class MonsterTwo {
 
   //constructors in Java LoooL
   public MonsterTwo(String monsterName, int health, int attack, int movement) {
-    this.monsterName = monsterName;
+    this.monsterName = monsterName.toUpperCase();
     this.health = health;
     this.attack = attack;
     this.movement = movement;
