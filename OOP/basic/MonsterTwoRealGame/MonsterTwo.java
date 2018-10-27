@@ -55,14 +55,13 @@ public class MonsterTwo {
     return alive;
   }
 
+        /* Overload */
   public void attackTheMonster(int decreaseHealth) {
     this.health -= decreaseHealth;
     if (this.health <= 0) {
       alive = false;
     }
   }
-
-                //==> Overload
 
   public void attackTheMonster(double decreaseHealth) {
     int intDecreaseHealth = (int) decreaseHealth;
@@ -71,6 +70,7 @@ public class MonsterTwo {
       alive = false;
     }
   }
+        /*Finish the overload*/
 
   //constructors in Java LoooL
   public MonsterTwo(String monsterName, int health, int attack, int movement) {
