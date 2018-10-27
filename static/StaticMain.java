@@ -5,15 +5,28 @@ public class StaticMain {
     LearnStatic nakchCs = new LearnStatic("nakchCs", "bacouch", 21);
     LearnStatic.setBody(421);
 
-    System.out.println(bel7aG.getName());
-    System.out.println("body: " + bel7aG.getBody() + "\n");
+    System.out.println();
+    System.out.println();
 
-    nakchCs.setBody(22);
+    System.out.println(bel7aG.getName());
+    System.out.println("body: " + LearnStatic.getBody() + "\n" + (bel7aG.isFine = "no"));
+    System.out.println();
+    System.out.println();
+    System.out.println();
+
+    LearnStatic.setBody(22);
     System.out.println(issam.getName());
-    System.out.println("body: " + issam.getBody() + "\n");
+    System.out.println("body: " + LearnStatic.getBody() + "\n" + nakchCs.isFine);
+    System.out.println();
+    System.out.println();
+    System.out.println();
 
     System.out.println(nakchCs.getName());
-    System.out.println("body: " + nakchCs.getBody() + "\n");
+    System.out.println("body: " + LearnStatic.getBody() + "\n");
+
+
+
+
 
   }
 }

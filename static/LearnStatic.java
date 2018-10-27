@@ -3,6 +3,7 @@ public class LearnStatic {
   private String surname;
   private int age;
   private static int body = 1;
+  public String isFine = "yeah";
 
   public void setName(String name) {
     this.name = name;
