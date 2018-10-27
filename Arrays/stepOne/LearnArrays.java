@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class LearnArrays {
+
+  public static Scanner userInput = new Scanner(System.in);
 
   public static void main(String[] args) {
 
@@ -80,5 +84,20 @@ public class LearnArrays {
       System.out.printf("Language %s is the %d for me.\n", language, index++);
     }
 
+    String[][] multipleStringArray = new String[4][4];
+
+    for (int i = 0; i < multipleStringArray.length; i++) {
+      for (int j = 0; j < multipleStringArray[i].length; j++) {
+        multipleStringArray[i][j] = userInput.nextLine();
+      }
+    }
+
+    for (int i = 0; i < multipleStringArray.length; i++) {
+      System.out.print("| ");
+      for (int j = 0; j < multipleStringArray[i].length; j++) {
+          System.out.print(multipleStringArray[i][j] + " | ");
+      }
+      System.out.println();
+    }
   }
 }
