@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class LearnArrays {
 
@@ -88,16 +89,44 @@ public class LearnArrays {
 
     for (int i = 0; i < multipleStringArray.length; i++) {
       for (int j = 0; j < multipleStringArray[i].length; j++) {
-        multipleStringArray[i][j] = userInput.nextLine();
+        // multipleStringArray[i][j] = userInput.nextLine();
       }
     }
 
+    System.out.println();
+    System.out.println();
     for (int i = 0; i < multipleStringArray.length; i++) {
       System.out.print("| ");
       for (int j = 0; j < multipleStringArray[i].length; j++) {
-          System.out.print(multipleStringArray[i][j] + " | ");
+        multipleStringArray[i][j] = "Line: " + Integer.toString(i + 1) + " - column: " + Integer.toString(j + 1);
+        System.out.print(multipleStringArray[i][j] + " | ");
       }
       System.out.println();
+      System.out.println();
     }
+
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    for (String[] line :  multipleStringArray) {
+      System.out.print("| ");
+      for (String column : line) {
+        System.out.print(column + " | ");
+      }
+      System.out.println();
+      System.out.println();
+    }
+
+            /* Arrays.copyOf(myArray, numberOfElementAndIndexStartFromZero) */
+
+    int[] myArray = {1, 4, 3, 12, 44, 12, 444, 121, 0};
+    int[] copiedArray = Arrays.copyOf(myArray, 6); // copy the first 6 element inside thi array
+
+    for (int element : copiedArray) {
+      System.out.print(element + "\t");
+    }
+
+    /* Arrays.copyOfRange(myArray, numberStartFromZero) */
+
   }
 }
