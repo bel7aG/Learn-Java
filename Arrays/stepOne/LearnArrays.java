@@ -60,6 +60,25 @@ public class LearnArrays {
 
             /* other array of string */
 
-    System.out.printf("okokok %d", 122);        
+    String[] pLanguages = {
+      "Javascript",
+      "React",
+      "es6",
+      "css / scss",
+      "jsx",
+      "node",
+      "python",
+      "java",
+      "PHP"
+    };
+
+    int index = 1;
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    for (String language : pLanguages) {
+      System.out.printf("Language %s is the %d for me.\n", language, index++);
+    }
+
   }
 }
