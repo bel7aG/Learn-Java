@@ -21,7 +21,10 @@ public class Robot {
       "dont joke with me brother ...";
   }
 
-
-
-
+  public void display() {
+    System.out.println("name: " + this.name);
+    System.out.println("x Position: " + this.x);
+    System.out.println("y Position: " + this.y);
+    System.out.println("direction: " + this.direction);
+  }
 }
