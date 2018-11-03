@@ -4,6 +4,13 @@ public class Robot {
   private int y; //North
   private String direction;
 
+  // constructor
+  public Robot(String name) {
+    this.name = name;
+    this.x = this.y = 0;          //default
+    this.direction = "east";     //default
+  }
+
   public void move() {
     this.y = this.direction.toLowerCase() == "north" ? this.y++ : this.y;
     this.y = this.direction.toLowerCase() == "sud" ? this.y-- : this.y;
