@@ -4,10 +4,10 @@ public class Employe {
   private String surname;
   private float impot;
 
-  public Employe(int paramInt, String paramString1, String paramString2) {
-    matricule = paramInt;
-    name = paramString1;
-    surname = paramString2;
+  public Employe(int matricule, String name, String surname) {
+    this.matricule = matricule;
+    this.name = name;
+    this.surname = surname;
   }
 
   public void setImpot(float paramFloat) {
@@ -19,7 +19,6 @@ public class Employe {
   }
 
   public String toString() {
-    String str = "";
-    return str = str + matricule + "  " + name + "  " + surname;
+    return "Matricule: " + this.matricule + "\nname: " + this.name + "\nsurname: " + this.surname;
   }
 }
