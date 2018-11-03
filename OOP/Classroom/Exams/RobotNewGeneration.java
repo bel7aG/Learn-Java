@@ -1,14 +1,22 @@
 public class RobotNewGeneration extends Robot {
-  public RobotNewGeneration(String name) {
-    super(name);
+  public RobotNewGeneration(String name, int x, int y, String direction) {
+    super(name, x, y, direction);
   }
 
-  public step(int steps) {
-    this.y = this.direction.toLowerCase() == "north" ? (this.y += steps)  : this.y;
-    this.y = this.direction.toLowerCase() == "sud" ? (this.y -= steps) : this.y;
+  public void step(int steps) {
+    for (int step = 0; step < steps; step++) {
+      this.step();
+    }
+  }
 
-    this.x = this.direction.toLowerCase() == "east" ? (this.x += steps) : this.x;
-    this.x = this.direction.toLowerCase() == "west" ? this.x-- : this.x;
+  public void left() {
+    this.right();
+    this.right();
+    this.right();
+  }
 
+  public void halfTurn() {
+    this.right();
+    this.right();
   }
 }
