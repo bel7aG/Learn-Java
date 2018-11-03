@@ -4,7 +4,7 @@ public class Qcm {
   Scanner userInput = new Scanner(System.in);
   private String themeQcm;
   private QuestionRepUnique[] tabQuestions = new QuestionRepUnique[30];
-  private int nbQuestions = 0;
+  private int nbQuestions;
 
   public Qcm(String themeQcm) {
     this.themeQcm = themeQcm;
@@ -23,11 +23,12 @@ public class Qcm {
     int choiceNumber;
     int k = 0;
     for (int i = 0; i < nbQuestions; i++) {
+      System.out.println("\n\n");
       System.out.println(tabQuestions[i].toString());
       System.out.println("\n\n");
+      System.out.print("answer to this question [1 or 2 or 3] : ");
       if (userInput.hasNextInt()) {
         do {
-          System.out.println("\n\nanswer to this quetion [1 or 2 or 3]");
           choiceNumber = userInput.nextInt();
         } while (choiceNumber < 1 || choiceNumber > 3);
 
@@ -39,7 +40,11 @@ public class Qcm {
         System.out.println("sorry ur keyboard give the wrong type.");
       }
     }
-    System.out.println("\n" + k + "correct\n");
+    if (k >= (float) (nbQuestions / 2))
+      System.out.println("\n" + k + " Answers correct. PASSED\n");
+    else
+      System.out.println("\n" + k + " Answers correct. FAILED\n");
+
     return k;
   }
 }
