@@ -1,4 +1,4 @@
-public class Qustion {
+public class Question {
   private String ennonceQuestion;
   private String themeQuestion;
   protected String[] tabRepPropsees = new String[3];
@@ -14,11 +14,11 @@ public class Qustion {
     this.tabRepPropsees = t;
   }
 
-  public static boolean identique(Question q) {
-      return Question.ennonceQuestion == q.ennonceQuestion && Question.themeQuestion == q.themeQuestion;
+  public static boolean identique(Question qOne, Question qTwo) {
+      return ((qOne.ennonceQuestion == qTwo.ennonceQuestion) && (qOne.themeQuestion == qTwo.themeQuestion));
   }
 
-  public boolean identique(Question qOne, Qeustion qTwo) {
+  public boolean identique(Question Q) {
     return this.ennonceQuestion == Q.ennonceQuestion && this.themeQuestion == Q.themeQuestion;
   }
 
