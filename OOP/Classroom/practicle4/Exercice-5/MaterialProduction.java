@@ -8,8 +8,8 @@ class MaterialProduction extends Material {
     this.percent = percent;
   }
 
+  @Override
   public String toString() {
-    super.toString();
     return "\npromo type: " + this.typePromo + ".\npercent: " + this.percent + "\nreference" + super.toString();
   }
 

@@ -12,8 +12,7 @@ public class Qcm {
 
   public void addQuestion(QuestionRepUnique q) {
     if (nbQuestions < 30 && q.getTheme() == this.themeQcm) {
-      this.tabQuestions[nbQuestions] = q;
-      nbQuestions++;
+      this.tabQuestions[nbQuestions++] = q;
     } else {
       System.out.println("you cant add a question for some reasons ..");
     }

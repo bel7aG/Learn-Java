@@ -11,7 +11,7 @@ public class QuestionRepUnique extends Question {
 
   public int numRepCorrect() {
     for (int i = 0; i < super.tabRepPropsees.length; i++) {
-      if (super.tabRepPropsees[i] == this.repCorrect) {
+      if (tabRepPropsees[i] == this.repCorrect) {
         return i + 1;
       }
     }
