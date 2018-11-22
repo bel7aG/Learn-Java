@@ -1,7 +1,7 @@
 public abstract class Employee {
   private int matricule;
   private String name, surname;
-  private Dateq birthDay;
+  private Date birthDay = new Date();
   private float prime;
 
   public Employee(int matricule, String name, String surname, Date birthDay, float prime) {
@@ -22,4 +22,5 @@ public abstract class Employee {
       "\n\tBirth Day: " + this.birthDay + "\n\tPrime: " + this.prime
     );
   }
+  public abstract float salaryCalculation();
 }
