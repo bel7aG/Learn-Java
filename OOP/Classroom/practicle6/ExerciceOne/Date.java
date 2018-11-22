@@ -4,7 +4,7 @@ public class Date {
   public Date(int day, int month, int year) {
     this.day = day;
     this.month = month;
-    thi.year = year;
+    this.year = year;
   }
 
   public int getDay() {
@@ -19,8 +19,8 @@ public class Date {
     return this.year;
   }
 
-  public void stream() {
-    System.out.println("\n\tDate: " + this.day + "/" + this.month + "/" + this.year);
+  public String toString() {
+    return "\n\n\tDate: " + this.day + "/" + this.month + "/" + this.year;
   }
 
 }

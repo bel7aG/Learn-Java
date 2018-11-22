@@ -15,6 +15,7 @@ public class SalaryEmployee extends Employee {
 
   @Override
   public String toString() {
-    return super.toString() + "\n\tgrade: " + this.grade;
+    return super.toString() + "\n\n\tgrade: " + this.grade + "\n\n\tSalary: " +
+    this.salaryCalculation() + " Dinars\n\n\n------------------------------------------------------------------------------------\n\n";
   }
 }

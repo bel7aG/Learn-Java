@@ -1,7 +1,7 @@
 public abstract class Employee {
   private int matricule;
   private String name, surname;
-  private Date date;
+  private Date birthDay;
   private float prime;
 
   public abstract float salaryCalculation();
@@ -20,8 +20,8 @@ public abstract class Employee {
 
   public String toString() {
     return (
-      "\n\n"+ this.name + " " + this.surname +"\n\tMatricule: " + this.matricule +
-      "\n\tBirth Day: " + this.birthDay.stream + "\n\tPrime: " + this.prime
+      "\n\n\n\t\t\t\tname: "+ this.name + " " + this.surname +"\n\n\tMatricule: " + this.matricule +
+      "\n\n\tBirth Day: " + this.birthDay.toString() + "\n\n\tPrime: " + this.prime
     );
   }
 }
