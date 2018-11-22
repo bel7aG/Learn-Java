@@ -10,7 +10,7 @@ public class SalaryEmployee extends Employee {
 
   @Override
   public float salaryCalculation() {
-    return this.grade.cadre ? (float) (700 + this.getPrime()) : (float) (200 + this.getPrime());
+    return this.grade == Tgrade.cadre ? (float) (700 + this.getPrime()) : (float) (200 + this.getPrime());
   }
 
   @Override
