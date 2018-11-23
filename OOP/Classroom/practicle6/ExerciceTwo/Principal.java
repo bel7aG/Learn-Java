@@ -5,10 +5,11 @@ public class Principal {
     AbsCounter cycle = new CounterCycle(min, max, current);
 
     System.out.println("\n\n\t\tOrd Couter\t\t\t\tCycle Counter");
-    for (int i = 0; i < 28; i++) {
+    for (int i = 0; i < (max + 4); i++) {
       cycle.increment();
       System.out.println("\t\t  " + ord.getCurrent());
       System.out.println("\t\t\t\t\t\t\t\t  " + cycle.getCurrent());
+      System.out.println("\n|-------------------------------------|-------------------------------------|\n");
     }
   }
 }
