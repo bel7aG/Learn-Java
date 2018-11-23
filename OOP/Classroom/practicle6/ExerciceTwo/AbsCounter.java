@@ -10,6 +10,24 @@ public abstract class AbsCounter {
     this.current = 0;
   }
 
+  public int getMin() {
+    return this.min;
+  }
+
+
+  public void setMin(int min) {
+    this.min = min;
+  }
+
+  public void setCurrent(int current) {
+    this.current = current;
+  }
+
+
+  public int getCurrent() {
+    return this.current;
+  }
+
   public abstract void increment();
 
 }

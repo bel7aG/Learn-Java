@@ -4,8 +4,9 @@ public class OrdCounter extends AbsCounter {
     super(min, current);
   }
 
-  public increment() {
-
+  @Override
+  public void increment() {
+    
   }
 
 }
