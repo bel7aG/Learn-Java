@@ -1,6 +1,6 @@
 public class Principal {
   public static void main(String[] args) {
-    int min = 1, max = 20, current = 2;
+    int min = 1, max = 6, current = 2;
     AbsCounter ord = new OrdCounter(min, current);
     AbsCounter cycle = new CounterCycle(min, max, current);
 
