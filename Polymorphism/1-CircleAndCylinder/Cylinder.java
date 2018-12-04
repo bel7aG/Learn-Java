@@ -11,7 +11,7 @@ public class Cylinder extends Circle {
       return this.height;
    }
    // Return the volume of this cylinder
-   public double getVolumne() {
+   public double getVolume() {
       return super.getArea() * height;
    }
    // Override the inherited method to return the surface area
