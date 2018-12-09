@@ -5,11 +5,24 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
-
 import javafx.stage.Stage;
 
-public class App {
+public class App extends Application{
   public static void main(String[] args) {
-    System.out.println("ok");
+    launch(args); // Method inside Application class ==> setup your program as javafx Application
+    // in javaFX the entire window called STAGE and the content inside your window that's the SCENE
   }
+
+  @Override
+  public void start(Stage primaryStage) throws Exception {
+    primaryStage.setTitle("bel7aG write javaFX for the first time xD");
+    Button myButton = new Button();
+    myButton.setText("Click me");
+    StackPane layout = new StackPane();
+    layout.getChildren().add(myButton);
+    Scene scene = new Scene(layout, 400, 300);
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
 }
