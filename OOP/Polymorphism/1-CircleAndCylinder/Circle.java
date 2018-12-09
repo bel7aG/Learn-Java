@@ -5,6 +5,10 @@ public class Circle {
     this.radius = radius;
   }
 
+  public Circle() {
+    
+  }
+
   public double getRadius() {
     return this.radius;
   }
