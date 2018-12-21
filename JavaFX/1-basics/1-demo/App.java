@@ -16,16 +16,17 @@ public class App extends Application {
 
   @Override
   public void start(Stage primaryStage) throws Exception {
-    primaryStage.setTitle("bel7aG write javaFX for the first time xD");
-    myButton = new Button();
-    myButton.setText("Click me");
+    primaryStage.setTitle("bel7aG write javaFX for the first time xD"); //title mte3 el window
+    myButton = new Button("ah nounou");
 
-    myButton.setOnAction(event -> System.out.println("is this a callback inside java ?"));
+    myButton.setOnAction(event -> AlertBox.display("Welcome to hiven", "okey"));
+
 
     StackPane layout = new StackPane();
     layout.getChildren().add(myButton);
     Scene scene = new Scene(layout, 400, 300);
     primaryStage.setScene(scene);
+    primaryStage.setMaximized(true); //thot stage (window) full screen maoujouda f new java 8
     primaryStage.show();
   }
 }
