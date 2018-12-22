@@ -11,16 +11,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.*;
-  import javafx.scene.*;
-  import javafx.scene.layout.*;
-  import javafx.scene.control.*;
-  import javafx.geometry.*;
+import javafx.scene.*;
+import javafx.scene.layout.*;
+import javafx.scene.control.*;
+import javafx.geometry.*;
 
 
 public class App extends Application{
 
-  public static QuestionRepUnique qOne = new QuestionRepUnique("javascript ?", "OOP");
-  public static QuestionRepUnique qTwo = new QuestionRepUnique("GraphQL", "OOP");
+  QuestionRepUnique qOne = new QuestionRepUnique("My Main Language is ?", "OOP");
+  QuestionRepUnique qTwo = new QuestionRepUnique("Best OOP language is ?", "OOP");
 
   public static Scene scene;
   public static VBox layout;
@@ -37,8 +37,8 @@ public class App extends Application{
 
     layout = new VBox();
 
-    String[] possibleAnswerQOne = {"compile", "intrepreted", "compile and interpreted"};
-    String[] possibleAnswerQTwo = {"API", "Nodejs", "C++"};
+    String[] possibleAnswerQOne = {"Javascript", "Java", "Python"};
+    String[] possibleAnswerQTwo = {"C++", "Nodejs", "Java"};
 
     qOne.setTabRepProposees(possibleAnswerQOne);
     qTwo.setTabRepProposees(possibleAnswerQTwo);
@@ -46,10 +46,9 @@ public class App extends Application{
     Qcm exam = new Qcm("OOP");
     exam.addQuestion(qOne);
     exam.addQuestion(qTwo);
-    exam.answerQuestion();
 
-    qOne.setRepCorrect("compile and interpreted");
-    qTwo.setRepCorrect("C++");
+    qOne.setRepCorrect("Javascript");
+    qTwo.setRepCorrect("Java");
 
 
     Label questionOne = new Label(qOne.getEnnonceQuestion());
@@ -79,6 +78,7 @@ public class App extends Application{
 
 
     scene = new Scene(layout, 700, 570);
+    scene.getStylesheets().add("App.css");
     window.setScene(scene);
     window.show();
 
@@ -86,17 +86,6 @@ public class App extends Application{
 
     submit.setOnAction((event) -> this.getChoice(choiceBoxOne, choiceBoxTwo));
 
-    // String[] possibleAnswerQOne = {"compile", "intrepreted", "compile and interpreted"};
-    // String[] possibleAnswerQTwo = {"API", "Nodejs", "C++"};
-
-    // qOne.setRepCorrect("compile and interpreted");
-    // qTwo.setRepCorrect("C++");
-    //
-    // Qcm exam = new Qcm("OOP");
-    // exam.addQuestion(qOne);
-    // exam.addQuestion(qTwo);
-    //
-    // exam.answerQuestion();
 
   }
 
@@ -128,6 +117,7 @@ public class App extends Application{
       layout.setAlignment(Pos.TOP_CENTER);
 
       Scene scene = new Scene(layout, 400, 400);
+      scene.getStylesheets().add("App.css");
       window.setScene(scene);
       window.show();
   }

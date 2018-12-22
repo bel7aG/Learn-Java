@@ -31,29 +31,4 @@ public class Qcm {
     }
   }
 
-  public int answerQuestion() {
-    int choiceNumber;
-    int k = 0;
-    for (int i = 0; i < nbQuestions; i++) {
-        if (userInput.hasNextInt()) {
-        do {
-          choiceNumber = userInput.nextInt();
-        } while (choiceNumber < 1 || choiceNumber > 3);
-
-        if (tabQuestions[i].numRepCorrect() == choiceNumber) {
-          k++;
-        }
-        System.out.println("\n\n");
-      } else {
-        System.out.println("sorry ur keyboard give the wrong type.");
-      }
-    }
-    if (k >= (float) (nbQuestions / 2))
-      System.out.println("\n" + k + " Answers correct. PASSED\n");
-    else
-      System.out.println("\n" + k + " Answers correct. FAILED\n");
-
-    return k;
-  }
-
 }
