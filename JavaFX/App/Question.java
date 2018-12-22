@@ -1,13 +1,3 @@
-import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
-
-
 public class Question {
   private String ennonceQuestion;
   private String themeQuestion;
@@ -43,5 +33,8 @@ public class Question {
 
   public String getTheme() {
     return this.themeQuestion;
+  }
+  public String getEnnonceQuestion() {
+    return this.ennonceQuestion;
   }
 }
